@@ -1,0 +1,108 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 8.5.2023
+  Changes:
+    - Fixed a bug with the resource template modifier which caused, among other things, the Average planet to often have less resources than it should.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 18.1.2023
+  Changes:
+    - Swapped zones for Rogue Planet and Biter Planet so the Biter Planet appears later.
+    - Fixed a bug that fails to raise some events which would later result in crashes with help from community (Thank you!)
+    - Fixed a bug with the Average Planet template where no resources were actually missing.
+    - Fixed issues related to modded ores not spawning on planets
+    - Fixed rocks not spawning on Barren planet
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 13.3.2021
+  Changes:
+    - typo
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 13.3.2021
+  Changes:
+    - Added error handling for trying to generate a planet template that does not exist.
+    - (Mod Compatability) Fixed a bug causing modded resources to not spawn on most planets.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 3.12.2020
+  Changes:
+    - Factorio 1.1
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 7.5.2020
+  Changes:
+    - Fixed planet RNG settings
+    - Warptorio Expansion planets bug fixes
+    - Tweaked jungle planet
+    - Fixed biter planet bugs
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 13.4.2020
+  Changes:
+    - Warptorio2 Update
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 11.4.2020
+  Changes:
+    - Tweaked jungle planet
+    - Fixed some bugs with resource-specific planets
+    - Added some flags to a few planets
+    - Factorio 0.18.18
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 17.11.2019
+  Changes:
+    - More work on management & communication of planet templates between mods
+    - Maze Planet
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 17.11.2019
+  Changes:
+    - post_dependencies_loaded tweak
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 17.11.2019
+  Changes:
+    - Moved functions around attempting to fix post_dependencies_loaded desync
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 17.11.2019
+  Changes:
+    - Added controls for surface-specific enemy/biter forces e.g. evolution
+    - Added biomes option to planet generator table, allowing planets to be used together like preconfigured biomes
+    - Fixed crash on deleting surfaces
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 15.11.2019
+  Changes:
+    - More progress
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 15.11.2019
+  Changes:
+    - Finished bootstrap stuff
+    - Testing phase for planet updates
+    - Compatability with Stacktorio
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 15.11.2019
+  Changes:
+    - Completed initial fork + a bunch of tweaks to planet templates
