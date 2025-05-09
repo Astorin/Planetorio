@@ -123,24 +123,24 @@ planets.cache.ents={all={},mod={},nauvis={}}
 
 -- on_load/on_init
 function planets.BuildCache() if(planets.cacheBuilt)then return end planets.cacheBuilt=true
-	local pt=game.autoplace_control_prototypes local ct=planets.cache.autoplace
+	local pt=game.default_map_gen_settings.autoplace_controls local ct=planets.cache.autoplace
 	for k,v in pairs(pt)do if(v.category~="resource")then table.insert(ct.all,v.name) if(not table.HasValue(planets.nauvis.autoplace,v.name))then table.insert(ct.mod,v.name) else table.insert(ct.nauvis,v.name) end end end
 
-	local pt=game.autoplace_control_prototypes local ct=planets.cache.resource
+	local pt=game.default_map_gen_settings.autoplace_controls local ct=planets.cache.resource
 	for k,v in pairs(pt)do if(v.category=="resource")then table.insert(ct.all,v.name) if(not table.HasValue(planets.nauvis.resource,v.name))then table.insert(ct.mod,v.name) else table.insert(ct.nauvis,v.name) end end end
 
-	local pt=game.decorative_prototypes local ct=planets.cache.decor
+	local pt=game.default_map_gen_settings.autoplace_settings local ct=planets.cache.decor
 	for k,v in pairs(pt)do if(v.autoplace_specification)then table.insert(ct.all,v.name) if(not table.HasValue(planets.nauvis.decor,v.name))then table.insert(ct.mod,v.name) else table.insert(ct.nauvis,v.name) end end end
 
-	local pt=game.entity_prototypes local ct=planets.cache.ents
+	local pt=game.default_map_gen_settings.autoplace_settings local ct=planets.cache.ents
 	for k,v in pairs(pt)do if(v.autoplace_specification)then table.insert(ct.all,v.name) if(not table.HasValue(planets.nauvis.entities,v.name))then table.insert(ct.mod,v.name) else table.insert(ct.nauvis,v.name) end end end
 
-	if(game.active_mods["alien-biomes"])then planets.NauvisAlienBiomes() end
-	local pt=game.tile_prototypes local ct=planets.cache.tile
+	if script.active_mods["alien-biomes"] then planets.NauvisAlienBiomes() end
+	local pt=game.default_map_gen_settings.autoplace_settings local ct=planets.cache.tile
 	for k,v in pairs(pt)do table.insert(ct.all,v.name)
 		if(not table.HasValue(planets.nauvis.tile,v.name))then table.insert(ct.mod,v.name) else table.insert(ct.nauvis,v.name) end
 	end
-	global.controlcache=planets.cache
+	storage.controlcache=planets.cache
 end
 
 --[[ Gen functions etc ]]--
@@ -220,8 +220,8 @@ end
 
 
 function planets.lookup(ctype,box,ptrn,invert)
-	if(not ptrn)then return global.controlcache[ctype][box] end
-	return table.GetMatchTable(global.controlcache[ctype][box],ptrn,invert)
+	if(not ptrn)then return storage.controlcache[ctype][box] end
+	return table.GetMatchTable(storage.controlcache[ctype][box],ptrn,invert)
 end
 
 --[[ Basic control modifiers ]]--
